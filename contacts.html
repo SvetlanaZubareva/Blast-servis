@@ -7,6 +7,59 @@
     <title>Document</title>
 </head>
 <body>
+  
+
+
+
+  <div id="header">
+    <div id="navigation">
+        <ul id="menu">
+            <li><a href="">Сумки</a></li>
+            <li><a href="">Обувь</a></li>
+            <li><a href="">Шарфы</a></li>
+            <li><a href="">Одежда</a></li>
+            <li><a href="">Аксессуары</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<form action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+    <fieldset>
+      <h3>Форма заказа</h3>
+      <p>
+        <label>Имя*:</label>
+        <input name="name" value="" size="40" type="text" class="required" />
+      </p>
+  
+      <p> 
+        <label>Контактный номер*:</label>
+        <input name="tel" value="" size="40" class="required" type="tel" />
+      </p>
+  
+      <p>
+        <label>E-mail:</label>
+        <input name="email" value="" size="40" type="email" />
+      </p>
+  
+      <p>
+        <label>Описание заказа:</label>
+        <textarea name="message" cols="40" rows="10" > </textarea>
+      </p>
+  
+      <p>
+        <label>Прикрепить файл:</label>
+        <input name="file" value="1" size="40" type="file" />
+      </p>
+  
+      <input value="Отправить" name="sendMail" type="submit" />
+    </fieldset>
+  </form>
+
   <form action="send.php" method="post" id="sendform" enctype="multipart/form-data">
     <fieldset>
       <h3>Форма заказа</h3>
@@ -38,6 +91,149 @@
       <input value="Отправить" name="sendMail" type="submit" />
     </fieldset>
   </form>
+  <form action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+    <fieldset>
+      <h3>Форма заказа</h3>
+      <p>
+        <label>Имя*:</label>
+        <input name="name" value="" size="40" type="text" class="required" />
+      </p>
+  
+      <p> 
+        <label>Контактный номер*:</label>
+        <input name="tel" value="" size="40" class="required" type="tel" />
+      </p>
+  
+      <p>
+        <label>E-mail:</label>
+        <input name="email" value="" size="40" type="email" />
+      </p>
+  
+      <p>
+        <label>Описание заказа:</label>
+        <textarea name="message" cols="40" rows="10" > </textarea>
+      </p>
+  
+      <p>
+        <label>Прикрепить файл:</label>
+        <input name="file" value="1" size="40" type="file" />
+      </p>
+  
+      <input value="Отправить" name="sendMail" type="submit" />
+    </fieldset>
+  </form>
+  <form action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+    <fieldset>
+      <h3>Форма заказа</h3>
+      <p>
+        <label>Имя*:</label>
+        <input name="name" value="" size="40" type="text" class="required" />
+      </p>
+  
+      <p> 
+        <label>Контактный номер*:</label>
+        <input name="tel" value="" size="40" class="required" type="tel" />
+      </p>
+  
+      <p>
+        <label>E-mail:</label>
+        <input name="email" value="" size="40" type="email" />
+      </p>
+  
+      <p>
+        <label>Описание заказа:</label>
+        <textarea name="message" cols="40" rows="10" > </textarea>
+      </p>
+  
+      <p>
+        <label>Прикрепить файл:</label>
+        <input name="file" value="1" size="40" type="file" />
+      </p>
+  
+      <input value="Отправить" name="sendMail" type="submit" />
+    </fieldset>
+  </form>
+  <form action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+    <fieldset>
+      <h3>Форма заказа</h3>
+      <p>
+        <label>Имя*:</label>
+        <input name="name" value="" size="40" type="text" class="required" />
+      </p>
+  
+      <p> 
+        <label>Контактный номер*:</label>
+        <input name="tel" value="" size="40" class="required" type="tel" />
+      </p>
+  
+      <p>
+        <label>E-mail:</label>
+        <input name="email" value="" size="40" type="email" />
+      </p>
+  
+      <p>
+        <label>Описание заказа:</label>
+        <textarea name="message" cols="40" rows="10" > </textarea>
+      </p>
+  
+      <p>
+        <label>Прикрепить файл:</label>
+        <input name="file" value="1" size="40" type="file" />
+      </p>
+  
+      <input value="Отправить" name="sendMail" type="submit" />
+    </fieldset>
+  </form>
+
+
+
+<style>
+  #header {
+	    height: 180px;
+	}
+	#navigation{
+	    background: #EF0505;
+	    height: 40px;
+	    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	    font-size: 16px;
+	    line-height: 40px;
+	    position: relative;
+	    top: 140px;
+	}
+	#navigation.fixed{
+	    position: fixed;
+	    top: 0;
+	    width: 100%;
+	    background: rgba(239, 5, 5, 0.95);
+	}
+	#navigation ul{
+	    width: 1180px;
+	    padding-left: 0;
+	    margin: 0 auto;
+	    display: block;
+	}
+	#menu li{
+	    float: left;
+	    list-style: none;
+	    padding: 0 25px;
+	    border-right: 1px solid #D60000;
+	}
+	#menu a {
+	    color: #fff;
+	    text-decoration: none;
+	    font-family: Verdana;
+	}
+	#menu>li a:hover{
+	    color: #656565;
+	    transition: color 0.5s ease;
+	}
+</style>
+
+
+
+
+
+
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" type="text/javascript"></script>
 <script>
@@ -72,6 +268,21 @@ $(document).ready(function(){
     }
   }); 
 })
+</script>
+
+
+
+<script>
+   jQuery(function($) {
+	        $(window).scroll(function(){
+	            if($(this).scrollTop()>140){
+	                $('#navigation').addClass('fixed');
+	            }
+	            else if ($(this).scrollTop()<140){
+	                $('#navigation').removeClass('fixed');
+	            }
+	        });
+	    });
 </script>
 
 </body>

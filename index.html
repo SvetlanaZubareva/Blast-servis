@@ -42,7 +42,31 @@
                 </li>
             </ul>
         </section>
-        <nav class="navigation">
+        <div id="header">
+            <div class="navigation" id="navigation">
+                <ul id="menu">
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="#1" >ГЛАВНАЯ</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="#2" >НАШИ ПРЕИМУЩЕСТВА</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="#3" >ПРИМЕРЫ РАБОТ</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="#4" >ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="#5" >КОНТАКТЫ</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__li-a" href="tel:+7-993-974-80-88" >+7-993-974-80-88</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <nav class="navigation">
             <ul class="navigation__ul">
                 <li class="navigation__li">
                     <a class="navigation__li-a" href="#1">
@@ -75,9 +99,9 @@
                     </a>
                 </li>
             </ul>
-        </nav>  
+        </nav>   -->
     </header>
-    <main class="main">
+    <main class="main" id="1">
         <section class="main__section">
             <h2 class="main__h2">
                 Беспылевая пескоструйная очистка кирпича <br>
@@ -421,9 +445,9 @@
                             Прикремить файл
                         </p>
                     </div> -->
-                    <input class="button button-form" value="Отправить" name="sendMail" type="submit">
+                    <input class="button button-form button" value="Отправить" name="sendMail" type="submit">
                         
-                    </button>
+                   
                     <p class="section-form__paragraf">Нажимая “Отправить” Вы подтверждаете согласие на обработку персональных данных в соответствии с Политикой конфиденциальности
     
                     </p>
@@ -584,6 +608,19 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+</script>
+
+<script>
+     jQuery(function($) {
+	        $(window).scroll(function(){
+	            if($(this).scrollTop()>140){
+	                $('#navigation').addClass('fixed');
+	            }
+	            else if ($(this).scrollTop()<140){
+	                $('#navigation').removeClass('fixed');
+	            }
+	        });
+	    });
 </script>
 
 
