@@ -1,0 +1,121 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  @font-face {
+   font-family: "acquest-script";
+   font-style: normal;
+   font-weight: 400;
+   src: url("./font/acquest-script.woff2") format("woff2");
+   font-display: swap;
+ } 
+ @font-face {
+    font-family: "AkayaKanadaka-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./font/AkayaKanadaka-Regular.ttf") format("ttf");
+    font-display: swap;
+  } 
+
+  
+  html {
+    height: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden  */
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100%;
+    font-family: "AkayaKanadaka-Regular";
+    font-size: calc(10px + 5 * (100vw / 1555));
+    line-height: calc(10px + 16 * (100vw / 1555));
+    font-weight: 400;
+    color: black;
+    background-color: #fff;
+    min-width: 320px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  button,
+  a{
+   cursor: pointer;
+   text-decoration: none;
+   color: black;
+  }
+  p,
+  h2,
+  h1{
+    margin: 0;
+  }
+  li{
+    list-style: none;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  .navigation__li-a{
+    color: #fff;
+    font-size: calc(10px + 6 * (100vw / 1555));
+  }
+  .navigation{
+    background: rgba(0, 0, 0, 0.74);
+  }
+  .main__h2{
+    color: #fff;
+    font-size: calc(20px + 28 * (100vw / 1555));
+  }
+  .main__p{
+    color: #fff;
+    font-size: calc(14px + 10 * (100vw / 1555));
+  }
+  .main-section__h2{
+    font-size: calc(18px + 18 * (100vw / 1555));
+  }
+  .section-carusel__h2{
+    font-size: calc(18px + 18 * (100vw / 1555));
+    color: #fff;
+  }
+  .section-dop__h2{
+    font-size: calc(18px + 18 * (100vw / 1555));
+    color: #fff;
+  }
+  .section-dop__p{
+    font-size: calc(15px + 10 * (100vw / 1555));
+  }
+  .section-form__h2{
+    color: #fff;
+    font-size: calc(18px + 18 * (100vw / 1555));
+  }
+  .section-form__p{
+    color: #fff;
+    font-size: calc(10px + 10 * (100vw / 1555));
+  }
+  .section-form__paragraf{
+    font-size: calc(5px + 10 * (100vw / 1555));
+  }
+  .footer__h2{
+    color: #fff;
+    font-size: calc(18px + 16 * (100vw / 1555));
+  }
+  .footer__li-ul-li{
+    color: #fff;
+    font-size: calc(10px + 10 * (100vw / 1555));
+  }
+  .svg--color{
+    fill: #B9121A;
+  }
+  
+
+
+
+
+
