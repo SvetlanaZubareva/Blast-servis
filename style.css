@@ -745,6 +745,12 @@ position: relative;
 .navigation__li:nth-child(5) {
   margin-right: 2%;
 }
+.main-section__h2{
+line-height: 25px;
+}
+.main-section__li{
+  margin-bottom: 20px;
+}
 }
 
 
