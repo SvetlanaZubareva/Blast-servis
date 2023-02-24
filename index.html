@@ -35,7 +35,7 @@
                         <path d="M20.1 5c-1.4 1.2-3.8 2-6.2 2-3.7 0-3.9.1-3.9 3.3 0 2.5-.9 4.2-3.5 6.7L3 20.4V47h44V20.4L43.5 17c-2.6-2.5-3.5-4.2-3.5-6.7 0-3.2-.2-3.3-3.9-3.3-2.3 0-4.8-.8-6.4-2-3.2-2.5-6.5-2.5-9.6 0zm7.4 1c.4.6-.7 1-2.5 1s-2.9-.4-2.5-1c.3-.6 1.5-1 2.5-1s2.2.4 2.5 1zM38 17.9c0 8.6-.1 9-2.7 10.9l-2.7 2-3.8-2.1-3.8-2.2-3.8 2.2-3.8 2.1-2.7-2c-2.6-1.9-2.7-2.3-2.7-10.9V9h26v8.9zm-28 3.3v4.2l-2.2-2.1C5.7 21.1 5.7 21 7.5 19c1-1.1 2-2 2.2-2 .1 0 .3 1.9.3 4.2zm32.2 2L40 25.4v-8.8l2.2 2.2 2.2 2.2-2.2 2.2zm-30.4 5.7 4.2 3.3-4.9 3.9C8.4 38.2 5.9 40 5.6 40c-.3 0-.6-3.7-.6-8.1 0-6.4.3-7.9 1.3-7.2.6.5 3.1 2.4 5.5 4.2zm32.8 10.8c-.3.3-2.8-1.3-5.6-3.5l-5.1-4.1 5.3-4 5.3-4 .3 7.6c.2 4.1.1 7.8-.2 8zm-9-3.7c4.9 3.9 9.1 7.5 9.2 8 .2.6-6.9 1-19.8 1s-20-.4-19.8-1c.6-1.7 18.1-15 19.8-15 .9 0 5.7 3.2 10.6 7z"/><path d="M15 15c0 .6 4 1 10 1s10-.4 10-1-4-1-10-1-10 .4-10 1zM15 20c0 .6 2.8 1 6.5 1s6.5-.4 6.5-1-2.8-1-6.5-1-6.5.4-6.5 1z"/>
                     </svg>
                     <p class="header__p">
-                        <a class="header__li-a" href="">
+                        <a class="header__li-a" href="mailto:info@multiblast.ru">
                             info@multiblast.ru
                         </a>
                     </p>
@@ -45,37 +45,37 @@
         <nav class="navigation">
             <ul class="navigation__ul">
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="#1">
                         ГЛАВНАЯ
                     </a>
                 </li>
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="#2">
                         НАШИ ПРЕИМУЩЕСТВА
                     </a>
                 </li>
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="#3">
                         ПРИМЕРЫ РАБОТ
                     </a>
                 </li>
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="#4">
                         ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
                     </a>
                 </li>
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="#5">
                         КОНТАКТЫ
                     </a>
                 </li>
                 <li class="navigation__li">
-                    <a class="navigation__li-a" href="">
+                    <a class="navigation__li-a" href="tel:+7-993-974-80-88">
                         +7-993-974-80-88
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav>  
     </header>
     <main class="main">
         <section class="main__section">
@@ -87,15 +87,76 @@
                 Любые объемы, бесплатный выезд <br> специалиста для оценки работ
             </p>
             <div class="main__div">
-                <button class="button button-main">
-                    ЗАКАЗАТЬ УСЛУГУ
-                </button>
-                <button class="button button-main--color">
-                    ПРИГЛАСИТЬ НА ТЕНДЕР
-                </button>
+
+
+
+                <!-- Триггер/Открыть модальный -->
+                    <button class="button button-main" id="myBtn">ЗАКАЗАТЬ УСЛУГУ</button>
+                    <button class="button button-main--color" id="myBtn1">ПРИГЛАСИТЬ НА ТЕНДЕР</button>
+                    <!-- <button class="button button-main">
+                        ЗАКАЗАТЬ УСЛУГУ  
+                    </button>
+                    <button class="button button-main--color">
+                        ПРИГЛАСИТЬ НА ТЕНДЕР
+                    </button> -->
+
+                    <!-- Модальный -->
+                    <div id="myModal" class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form class="section-form__form" action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+                            <fieldset class="fieldset">
+                                <h2 class="section-form__h2">
+                                    Напишите нам
+                                </h2>
+                                <input class="section-form__input section-form__input--top" name="name" value="" size="40" type="text" class="required"  placeholder="Имя" required>
+                                <input class="section-form__input" type="tel" placeholder="Телефон" required name="tel" value="" size="40" class="required">
+                                <input class="section-form__input" type="email" placeholder="Email" required name="email" value="" size="40" type="email">
+                                <input class="section-form__input section-form__input--hight" type="text" placeholder="Сообщение" name="message" cols="40" rows="10">
+                                <div class="input__wrapper">
+                                    <input value="1" size="40" type="file" name="file" id="input__file" class="input input__file input-file">
+                                    <label class="section-form__p" for="input__file">
+                                        <span class="input__file-icon-wrapper">
+                                            <img class="input__file-icon" src="./img/svg/Vector (27).svg" alt="Выбрать файл" width="25">
+                                        </span>
+                                        <span class="input__file-button-text">
+                                            Прикрепить файл
+                                        </span>
+                                    </label>
+                                </div>
+            
+            
+                                <!-- <div class="section-form__div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="50" fill="none">
+                                        <path fill="#B9121A" d="M5.723 1.423C3.102 3.144 1.26 6.04.425 10.03c-.335 1.721-.502 8.764-.39 18.233.167 17.53.501 18.782 4.796 20.973 2.063 1.017 2.62 1.017 4.684 0 4.35-2.191 4.63-3.365 4.796-21.599l.168-15.964-1.394-1.956c-1.84-2.583-4.406-2.583-6.19 0C5.5 11.596 5.5 11.752 5.5 26.152v14.477h3.346l.112-13.93c.167-11.66.278-13.851 1.003-13.851.725 0 .837 2.191 1.004 14.4.112 13.929.112 14.476-1.115 16.276-1.562 2.348-3.792 2.348-5.41-.078-1.227-1.8-1.227-2.191-1.06-17.607l.168-15.73 1.84-2.504C6.95 5.414 7.563 5.022 9.961 5.022c2.399 0 3.012.392 4.574 2.583l1.84 2.504.167 15.26.168 15.26H20V25.917C20 7.37 19.22 4.318 13.698 1.11c-2.677-1.565-5.187-1.487-7.975.313Zm7.808 1.173c1.004.627 2.565 2.426 3.457 4.07l1.618 2.895.167 14.79c.112 10.017 0 14.713-.39 14.713s-.614-4.617-.614-13.93c0-15.494-.39-17.373-4.015-20.503C10.184 1.58 5.61 3.38 3.269 8.701c-1.004 2.347-1.115 3.99-1.115 18.077V42.35l1.617 2.27c2.23 3.052 4.573 3.052 6.804 0l1.617-2.348-.111-15.025c-.168-13.303-.28-15.103-1.116-15.886-.725-.626-1.282-.626-1.952 0-.892.783-1.004 2.504-1.17 14.321-.057 8.06-.335 13.382-.67 13.382s-.558-5.165-.558-13.304c0-12.286.112-13.46 1.116-14.868.613-.861 1.617-1.566 2.23-1.566.614 0 1.618.705 2.231 1.566 1.06 1.487 1.116 2.582 1.116 16.042 0 11.504-.168 15.025-.837 16.825-.948 2.504-3.402 4.695-5.298 4.695s-4.35-2.19-5.298-4.695c-.67-1.8-.837-5.4-.837-17.138 0-8.608.223-15.808.614-17.06C3.436 2.988 8.79-.22 13.53 2.596Z"/>
+                                    </svg>
+                                    <input class="input-file" name="file" value="1" size="40" type="file" />
+                                    <p class="section-form__p">
+                                        Прикремить файл
+                                    </p>
+                                </div> -->
+                                <input class="button button-form" value="Отправить" name="sendMail" type="submit">
+                                    
+                                </button>
+                                <p class="section-form__paragraf">Нажимая “Отправить” Вы подтверждаете согласие на обработку персональных данных в соответствии с Политикой конфиденциальности
+                
+                                </p>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    </div>
+
+
+
+
+
+                
             </div>
         </section>
-        <section class="main-section">
+        <section class="main-section" id="2">
             <h2 class="main-section__h2">
                 Превосходство беспылевой пескоструйной очистки
             </h2>
@@ -150,10 +211,109 @@
                 </li>
             </ul>
         </section>
-        <section class="section-carusel">
+        <section class="section-carusel" id="3">
             <h2 class="section-carusel__h2">
                 Примеры работ
             </h2>
+            <div class="content">
+                <div class="slider autoplay">
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.05 (1).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.02.00 (3).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.05 (3).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.05.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.01.59.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (10).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (11).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.51.55.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (3).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (4).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.07 (1).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (9).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06 (5).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 21.40.06.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.53.42.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.41.56 (1).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.18.12 (1).jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.02.01.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        <img src="./img/jpg/WhatsApp Image 2023-02-16 at 22.02.00.jpeg" alt="" width="400px" height="300px">
+                    </h3>
+                  </div>
+                </div>
+              </div>
         </section>
         <section class="main-section">
             <h2 class="main-section__h2">
@@ -210,7 +370,7 @@
                 </li>
             </ul>
         </section>
-        <section class="section-dop">
+        <section class="section-dop" id="4">
             <h2 class="section-dop__h2">
                 Дополнительные услуги
             </h2>
@@ -229,29 +389,45 @@
                 </ul>
             </div>
         </section>
-        <section class="section-form">
-            <form class="section-form__form" action="">
-                <h2 class="section-form__h2">
-                    Напишите нам
-                </h2>
-                <input class="section-form__input section-form__input--top" type="text" placeholder="Имя">
-                <input class="section-form__input" type="tel" placeholder="Телефон">
-                <input class="section-form__input" type="email" placeholder="Email">
-                <input class="section-form__input section-form__input--hight" type="text" placeholder="Сообщение">
-                <div class="section-form__div">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="50" fill="none">
-                        <path fill="#B9121A" d="M5.723 1.423C3.102 3.144 1.26 6.04.425 10.03c-.335 1.721-.502 8.764-.39 18.233.167 17.53.501 18.782 4.796 20.973 2.063 1.017 2.62 1.017 4.684 0 4.35-2.191 4.63-3.365 4.796-21.599l.168-15.964-1.394-1.956c-1.84-2.583-4.406-2.583-6.19 0C5.5 11.596 5.5 11.752 5.5 26.152v14.477h3.346l.112-13.93c.167-11.66.278-13.851 1.003-13.851.725 0 .837 2.191 1.004 14.4.112 13.929.112 14.476-1.115 16.276-1.562 2.348-3.792 2.348-5.41-.078-1.227-1.8-1.227-2.191-1.06-17.607l.168-15.73 1.84-2.504C6.95 5.414 7.563 5.022 9.961 5.022c2.399 0 3.012.392 4.574 2.583l1.84 2.504.167 15.26.168 15.26H20V25.917C20 7.37 19.22 4.318 13.698 1.11c-2.677-1.565-5.187-1.487-7.975.313Zm7.808 1.173c1.004.627 2.565 2.426 3.457 4.07l1.618 2.895.167 14.79c.112 10.017 0 14.713-.39 14.713s-.614-4.617-.614-13.93c0-15.494-.39-17.373-4.015-20.503C10.184 1.58 5.61 3.38 3.269 8.701c-1.004 2.347-1.115 3.99-1.115 18.077V42.35l1.617 2.27c2.23 3.052 4.573 3.052 6.804 0l1.617-2.348-.111-15.025c-.168-13.303-.28-15.103-1.116-15.886-.725-.626-1.282-.626-1.952 0-.892.783-1.004 2.504-1.17 14.321-.057 8.06-.335 13.382-.67 13.382s-.558-5.165-.558-13.304c0-12.286.112-13.46 1.116-14.868.613-.861 1.617-1.566 2.23-1.566.614 0 1.618.705 2.231 1.566 1.06 1.487 1.116 2.582 1.116 16.042 0 11.504-.168 15.025-.837 16.825-.948 2.504-3.402 4.695-5.298 4.695s-4.35-2.19-5.298-4.695c-.67-1.8-.837-5.4-.837-17.138 0-8.608.223-15.808.614-17.06C3.436 2.988 8.79-.22 13.53 2.596Z"/>
-                    </svg>
-                    <p class="section-form__p">
-                        Прикремить файл
-                    </p>
-                </div>
-                <button class="button button-form">
-                    ОТПРАВИТЬ
-                </button>
-                <p class="section-form__paragraf">Нажимая “Отправить” Вы подтверждаете согласие на обработку персональных данных в соответствии с Политикой конфиденциальности
+        <section class="section-form" id="5">
+            <form class="section-form__form section-form__form--width" action="send.php" method="post" id="sendform" enctype="multipart/form-data">
+                <fieldset class="fieldset">
+                    <h2 class="section-form__h2">
+                        Напишите нам
+                    </h2>
+                    <input class="section-form__input section-form__input--top" name="name" value="" size="40" type="text" class="required"  placeholder="Имя" required>
+                    <input class="section-form__input" type="tel" placeholder="Телефон" required name="tel" value="" size="40" class="required">
+                    <input class="section-form__input" type="email" placeholder="Email" required name="email" value="" size="40" type="email">
+                    <input class="section-form__input section-form__input--hight" type="text" placeholder="Сообщение" name="message" cols="40" rows="10">
+                    <div class="input__wrapper">
+                        <input value="1" size="40" type="file" name="file" id="input__file" class="input input__file input-file">
+                        <label class="section-form__p" for="input__file">
+                            <span class="input__file-icon-wrapper">
+                                <img class="input__file-icon" src="./img/svg/Vector (27).svg" alt="Выбрать файл" width="25">
+                            </span>
+                            <span class="input__file-button-text">
+                                Прикрепить файл
+                            </span>
+                        </label>
+                    </div>
 
-                </p>
+
+                    <!-- <div class="section-form__div">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="50" fill="none">
+                            <path fill="#B9121A" d="M5.723 1.423C3.102 3.144 1.26 6.04.425 10.03c-.335 1.721-.502 8.764-.39 18.233.167 17.53.501 18.782 4.796 20.973 2.063 1.017 2.62 1.017 4.684 0 4.35-2.191 4.63-3.365 4.796-21.599l.168-15.964-1.394-1.956c-1.84-2.583-4.406-2.583-6.19 0C5.5 11.596 5.5 11.752 5.5 26.152v14.477h3.346l.112-13.93c.167-11.66.278-13.851 1.003-13.851.725 0 .837 2.191 1.004 14.4.112 13.929.112 14.476-1.115 16.276-1.562 2.348-3.792 2.348-5.41-.078-1.227-1.8-1.227-2.191-1.06-17.607l.168-15.73 1.84-2.504C6.95 5.414 7.563 5.022 9.961 5.022c2.399 0 3.012.392 4.574 2.583l1.84 2.504.167 15.26.168 15.26H20V25.917C20 7.37 19.22 4.318 13.698 1.11c-2.677-1.565-5.187-1.487-7.975.313Zm7.808 1.173c1.004.627 2.565 2.426 3.457 4.07l1.618 2.895.167 14.79c.112 10.017 0 14.713-.39 14.713s-.614-4.617-.614-13.93c0-15.494-.39-17.373-4.015-20.503C10.184 1.58 5.61 3.38 3.269 8.701c-1.004 2.347-1.115 3.99-1.115 18.077V42.35l1.617 2.27c2.23 3.052 4.573 3.052 6.804 0l1.617-2.348-.111-15.025c-.168-13.303-.28-15.103-1.116-15.886-.725-.626-1.282-.626-1.952 0-.892.783-1.004 2.504-1.17 14.321-.057 8.06-.335 13.382-.67 13.382s-.558-5.165-.558-13.304c0-12.286.112-13.46 1.116-14.868.613-.861 1.617-1.566 2.23-1.566.614 0 1.618.705 2.231 1.566 1.06 1.487 1.116 2.582 1.116 16.042 0 11.504-.168 15.025-.837 16.825-.948 2.504-3.402 4.695-5.298 4.695s-4.35-2.19-5.298-4.695c-.67-1.8-.837-5.4-.837-17.138 0-8.608.223-15.808.614-17.06C3.436 2.988 8.79-.22 13.53 2.596Z"/>
+                        </svg>
+                        <input class="input-file" name="file" value="1" size="40" type="file" />
+                        <p class="section-form__p">
+                            Прикремить файл
+                        </p>
+                    </div> -->
+                    <input class="button button-form" value="Отправить" name="sendMail" type="submit">
+                        
+                    </button>
+                    <p class="section-form__paragraf">Нажимая “Отправить” Вы подтверждаете согласие на обработку персональных данных в соответствии с Политикой конфиденциальности
+    
+                    </p>
+                </fieldset>
             </form>
         </section>
     </main>
@@ -263,15 +439,21 @@
                 </h2>
                 <ul class="footer__li-ul">
                     <li class="footer__li-ul-li">
-                        +7-993-974-80-88
-                    </li>
-                    <li class="footer__li-ul-li">
-
+                        <a class="WhatsApp" href="https://wa.me/79939748088?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82...">
+                            <svg class="svg-watsap"  xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                <path  d="M10.367.683C2.901 3.617-1.766 13.35.634 20.683c.8 2.134.933 5.2.4 7.067l-.933 3.333h11.066c10.8 0 11.334-.133 15.467-4.4 3.733-3.733 4.4-5.2 4.4-10.933 0-5.6-.667-7.2-4.133-10.8-4.134-4-12-6.133-16.534-4.267Zm1.867 12.667c-.8 2.667 4.667 7.067 6.533 5.2 1.6-1.6 4.934-.4 4.934 1.867 0 5.066-11.067 1.333-14.534-4.934-1.733-2.933-1.733-3.866-.133-5.733 1.333-1.733 2-1.733 2.8-.4.667.933.8 2.667.4 4Z"/>
+                            </svg>
+                        </a>
+                        <a class="footer__li-ul-li-a" href="tel:+7-993-974-80-88">
+                            +7-993-974-80-88
+                        </a>
                     </li>
                 </ul>
                 <ul class="footer__li-ul">
                     <li class="footer__li-ul-li">
-                        info@multiblast.ru
+                        <a class="footer__li-ul-li-a" href="mailto:info@multiblast.ru">
+                            info@multiblast.ru
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -286,9 +468,125 @@
                 </ul>
             </li>
             <li class="footer__li">
-
+                <img src="./img/jpg/111.jpg" alt="Карта">
             </li>
         </ul>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+ 
+<!-- // подключите slick-theme.css для использования стандартной темы отображения навигации -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <!-- // jquery -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        
+        <!-- // slick.min.js -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(".autoplay").slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000
+            });
+        </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" type="text/javascript"></script>
+<script>
+  // Как только страничка загрузилась 
+  window.onload = function () { 
+    // проверяем поддерживает ли браузер FormData 
+    if(!window.FormData) {
+      alert("Браузер не поддерживает загрузку файлов на этом сайте");
+    }
+  }
+
+
+$(document).ready(function(){
+  // =validation
+  var errorTxt = 'Ошибка отправки';
+  $("#sendform").validate({
+    submitHandler: function(form){
+      var form = document.forms.sendform,
+        formData = new FormData(form),
+        xhr = new XMLHttpRequest();
+
+      xhr.open("POST", "/send.php");
+      
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if(xhr.status == 200) {
+            $("#sendform").html('<p class="thank">Данные отправлены!<p>');
+          }
+        }
+      };
+      xhr.send(formData);
+    }
+  }); 
+})
+</script>
+
+
+
+<!-- Модальное окна -->
+<script>
+    // Получить модальный
+var modal = document.getElementById("myModal");
+
+// Получить кнопку, которая открывает модальный
+var btn = document.getElementById("myBtn");
+
+// Получить элемент <span>, который закрывает модальный
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на кнопку, откройте модальный
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Когда пользователь нажимает на <span> (x), закройте модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+    // Получить модальный
+    var modal = document.getElementById("myModal");
+
+// Получить кнопку, которая открывает модальный
+var btn = document.getElementById("myBtn1");
+
+// Получить элемент <span>, который закрывает модальный
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на кнопку, откройте модальный
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Когда пользователь нажимает на <span> (x), закройте модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
     </footer>
 </body>
 </html>
