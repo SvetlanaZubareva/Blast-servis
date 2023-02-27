@@ -1,0 +1,36 @@
+NAV
+*************************************************************************************/
+#nav-wrap{position:relative;margin:0px auto;z-index:100;}
+#menu-icon{display:none;}
+#nav{white-space:nowrap;margin:0 auto; font-size:95%; max-width:1200px;position:relative; z-index: 1000;}
+#nav li{position: relative; list-style:none; width:auto;float:left;text-align:center; background: #000; height: 25px; padding:10px 15px;}
+#nav li a{color:#fff; Text-decoration: none;}
+#nav li:hover{background: #484845;}
+#nav li a:hover{color:#fff;}
+#nav li.active {background: #FFFF00;} 
+#nav li.active a{color:#000;} 
+
+.contact li.righ{float:right;}
+.contact li.righ:hover{background: none;}
+.contact li.righ a{font-size:135%;color:#FFF;}
+.contact li.righ a:hover{color:#FFFF00;}
+
+.contact{white-space:nowrap;margin:0 auto; font-size:95%; float:right;position: absolute; right: 0; top: 0;z-index: 100;}
+.contact li{position: relative; list-style:none; width:auto;float:left;text-align:center; background: #000; height: 25px; padding:10px 15px;}
+.contact li.righ a.tel{display:none;}
+
+@media screen and (max-width:900px){
+#nav-wrap{position:relative;margin:0px auto;width:100%;}
+#menu-icon{display:block; color:#fff;width:80px;height:39px;cursor:pointer;font-size:20px;padding-top: 6px;}
+#menu-icon:hover{}
+#menu-icon.active{}
+#nav{clear:both;position:relative; top: 0px; width:100%;z-index:10000;padding:0px;display:none;}
+#nav li{float:none;text-align: left;}
+
+#nav li.righ{float:none; text-align:right;}}
+
+@media screen and (max-width: 800px) {
+.contact li.righ a.tel{display:inline-block;}}
+@media screen and (max-width: 500px) {
+.contact li.righ a.tel{display:none;}}
+
