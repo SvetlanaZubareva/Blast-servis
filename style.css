@@ -84,7 +84,7 @@
   .main__p{
     color: #fff;
     font-size: calc(14px + 10 * (100vw / 1555));
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   .main-section__h2{
     font-size: calc(18px + 18 * (100vw / 1555));
@@ -179,7 +179,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    padding: 100px 5% 20px;
+    padding: 200px 5% 20px;
   }
   .button-main{
     color: #fff;
@@ -259,7 +259,7 @@
     background-position: 90%;
   }
   .section-dop__p{
-    padding-top: 200px;
+    padding-top: 250px;
     padding-left: 50%;
     font-weight: 700;
   }
@@ -887,6 +887,8 @@ line-height: 25px;
 }
 .ul-navigation2{
   width: 80%;
+  margin-right: 12%;
+  width: 110%;
 }
 .navigation__li-a{
   font-size: 18px;

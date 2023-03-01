@@ -105,9 +105,9 @@ html,body{
 	font-size: 0;
 	width: 10px;
 	height: 10px;
-	background-color: #5D3051;
+	background-color: #fff;
 	border-radius: 50%;
-	border: 2px solid #5D3051;
+	border: 2px solid #fff;
 }
 
 .slider .slick-dots li.slick-active button{
