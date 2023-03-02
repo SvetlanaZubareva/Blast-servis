@@ -181,6 +181,15 @@
     height: 600px;
     padding: 200px 5% 20px;
   }
+  @media(min-width:1200px){
+    .main__section{
+    background-image: url("./img/jpg/55727.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding: 200px 5% 20px;
+  }
+  }
   .button-main{
     color: #fff;
     background-color: #B9121A;
@@ -892,6 +901,10 @@ line-height: 25px;
 }
 .navigation__li-a{
   font-size: 18px;
+}
+.main__section{
+  height: 600px;
+  padding: 100px 5% 20px;
 }
 }
 
