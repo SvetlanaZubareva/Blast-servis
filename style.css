@@ -179,7 +179,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    padding: 200px 5% 20px;
+    padding: 150px 5% 20px;
   }
   @media(min-width:1200px){
     .main__section{
@@ -187,7 +187,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    padding: 200px 5% 20px;
+    padding: 150px 5% 20px;
   }
   }
   .button-main{
