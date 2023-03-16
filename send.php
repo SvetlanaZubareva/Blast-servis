@@ -1,12 +1,13 @@
 <?php
 $to = 'se.berseneva@gmail.com';
 
+
 if ( isset( $_POST['sendMail'] ) ) {
   $name  = substr( $_POST['name'], 0, 64 );
   $tel = substr( $_POST['tel'], 0, 64 );
   $email   = substr( $_POST['email'], 0, 64 );
   $message = substr( $_POST['message'], 0, 250 );
- 
+
 
   if ( !empty( $_FILES['file']['tmp_name'] ) and $_FILES['file']['error'] == 0 ) {
     $filepath = $_FILES['file']['tmp_name'];
@@ -27,7 +28,7 @@ if ( isset( $_POST['sendMail'] ) ) {
 // Вспомогательная функция для отправки почтового сообщения с вложением
 function send_mail($to, $body, $email, $filepath, $filename)
 {
-  $subject = 'Тестирование формы с прикреплением файла с сайта proverstka.com.ua';
+  $subject = 'Форма заказа с сайта multiblast.ru';
   $boundary = "--".md5(uniqid(time())); // генерируем разделитель
   $headers = "From: ".$email."\r\n";   
   $headers .= "MIME-Version: 1.0\r\n";
